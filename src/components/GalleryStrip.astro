@@ -75,7 +75,7 @@
   </div>
 </div>
 
-<script>
+<script is:inline>
   const galleryItems = document.querySelectorAll('.gallery-reveal');
   const galleryObs = new IntersectionObserver(entries=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });

@@ -56,7 +56,7 @@
   </div>
 </section>
 
-<script>
+<script is:inline>
   const storyItems = document.querySelectorAll('.story-reveal');
   const storyObs = new IntersectionObserver(entries=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
