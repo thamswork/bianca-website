@@ -1,0 +1,224 @@
+<section style="padding:80px 40px;background:#ffffff;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="reveal-block" style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;opacity:0;transform:translateY(24px);transition:all 0.7s ease;">
+      <div>
+        <div style="font-family:'GillSans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:#FAB31E;margin-bottom:12px;">Five locations</div>
+        <h2 style="font-family:'GillSans',sans-serif;font-size:52px;font-weight:700;color:#235E44;line-height:1;">Where to find us</h2>
+      </div>
+      <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#235E44;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#FAB31E'" onmouseout="this.style.color='#235E44'">View all →</a>
+    </div>
+
+    <div class="reveal-block" style="display:flex;gap:0;border-bottom:2px solid #e0d8cc;opacity:0;transform:translateY(24px);transition:all 0.7s ease 0.15s;" id="loc-tabs">
+      <button onclick="showLoc(0)" class="loc-tab active-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:#235E44;border-bottom:3px solid #FAB31E;margin-bottom:-2px;transition:all 0.3s;">One Bangkok</button>
+      <button onclick="showLoc(1)" class="loc-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:rgba(35,94,68,0.4);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.3s;">Emsphere</button>
+      <button onclick="showLoc(2)" class="loc-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:rgba(35,94,68,0.4);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.3s;">Siam Paragon</button>
+      <button onclick="showLoc(3)" class="loc-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:rgba(35,94,68,0.4);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.3s;">ICONSIAM</button>
+      <button onclick="showLoc(4)" class="loc-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:rgba(35,94,68,0.4);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.3s;">Terminal 21</button>
+    </div>
+
+    <div id="loc-panels">
+
+      <div class="loc-panel" style="display:grid;grid-template-columns:1.4fr 1fr;">
+        <div style="position:relative;height:480px;overflow:hidden;" id="carousel-0">
+          <div class="carousel-track" style="display:flex;height:100%;transition:transform 0.5s ease;">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1555992336-03a23c7b20ee?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+          </div>
+          <button onclick="prevSlide(0)" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(255,241,218,0.9);border:none;width:40px;height:40px;cursor:pointer;font-size:18px;color:#235E44;display:flex;align-items:center;justify-content:center;transition:all 0.2s;z-index:2;" onmouseover="this.style.background='#FAB31E'" onmouseout="this.style.background='rgba(255,241,218,0.9)'">←</button>
+          <button onclick="nextSlide(0)" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(255,241,218,0.9);border:none;width:40px;height:40px;cursor:pointer;font-size:18px;color:#235E44;display:flex;align-items:center;justify-content:center;transition:all 0.2s;z-index:2;" onmouseover="this.style.background='#FAB31E'" onmouseout="this.style.background='rgba(255,241,218,0.9)'">→</button>
+          <div style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:6px;" id="dots-0">
+            <div class="dot active-dot" style="width:8px;height:8px;border-radius:50%;background:#FAB31E;cursor:pointer;transition:all 0.2s;" onclick="goToSlide(0,0)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;transition:all 0.2s;" onclick="goToSlide(0,1)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;transition:all 0.2s;" onclick="goToSlide(0,2)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;transition:all 0.2s;" onclick="goToSlide(0,3)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;transition:all 0.2s;" onclick="goToSlide(0,4)"></div>
+          </div>
+          <div style="position:absolute;top:16px;left:16px;background:#FAB31E;color:#235E44;font-family:'GillSans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 14px;">★ Featured</div>
+        </div>
+        <div style="background:#235E44;padding:56px 48px;display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:'Satisfy',cursive;font-size:20px;color:#FAB31E;margin-bottom:16px;">Cucina Italiana</div>
+          <h3 style="font-family:'GillSans',sans-serif;font-size:36px;font-weight:700;color:#FFF1DA;margin-bottom:8px;">One Bangkok</h3>
+          <div style="font-family:'GillSans',sans-serif;font-size:13px;color:#FAB31E;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:24px;">3rd Floor · Parade Zone</div>
+          <p style="font-family:'GillSans',sans-serif;font-size:14px;color:rgba(255,241,218,0.7);line-height:1.8;margin-bottom:32px;">Rama 4 Road, Lumphini, Bangkok<br/>Open daily 11:00 AM – 10:00 PM</p>
+          <div style="display:flex;gap:16px;">
+            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FFF1DA;text-decoration:none;border-bottom:1px solid rgba(255,241,218,0.3);padding-bottom:3px;transition:all 0.2s;" onmouseover="this.style.color='#FAB31E'" onmouseout="this.style.color='#FFF1DA'">Get directions</a>
+            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FAB31E;text-decoration:none;border-bottom:1px solid rgba(250,179,30,0.4);padding-bottom:3px;transition:all 0.2s;" onmouseover="this.style.letterSpacing='0.12em'" onmouseout="this.style.letterSpacing='0.08em'">Reserve a table</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-panel" style="display:none;grid-template-columns:1.4fr 1fr;">
+        <div style="position:relative;height:480px;overflow:hidden;" id="carousel-1">
+          <div class="carousel-track" style="display:flex;height:100%;transition:transform 0.5s ease;">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1555992336-03a23c7b20ee?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+          </div>
+          <button onclick="prevSlide(1)" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(255,241,218,0.9);border:none;width:40px;height:40px;cursor:pointer;font-size:18px;color:#235E44;display:flex;align-items:center;justify-content:center;transition:all 0.2s;z-index:2;" onmouseover="this.style.background='#FAB31E'" onmouseout="this.style.background='rgba(255,241,218,0.9)'">←</button>
+          <button onclick="nextSlide(1)" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(255,241,218,0.9);border:none;width:40px;height:40px;cursor:pointer;font-size:18px;color:#235E44;display:flex;align-items:center;justify-content:center;transition:all 0.2s;z-index:2;" onmouseover="this.style.background='#FAB31E'" onmouseout="this.style.background='rgba(255,241,218,0.9)'">→</button>
+          <div style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:6px;" id="dots-1">
+            <div class="dot active-dot" style="width:8px;height:8px;border-radius:50%;background:#FAB31E;cursor:pointer;" onclick="goToSlide(1,0)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(1,1)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(1,2)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(1,3)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(1,4)"></div>
+          </div>
+        </div>
+        <div style="background:#235E44;padding:56px 48px;display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:'Satisfy',cursive;font-size:20px;color:#FAB31E;margin-bottom:16px;">Cucina Italiana</div>
+          <h3 style="font-family:'GillSans',sans-serif;font-size:36px;font-weight:700;color:#FFF1DA;margin-bottom:8px;">Emsphere</h3>
+          <div style="font-family:'GillSans',sans-serif;font-size:13px;color:#FAB31E;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:24px;">G Floor</div>
+          <p style="font-family:'GillSans',sans-serif;font-size:14px;color:rgba(255,241,218,0.7);line-height:1.8;margin-bottom:32px;">Sukhumvit Road, Khlong Toei, Bangkok<br/>Open daily 11:00 AM – 10:00 PM</p>
+          <div style="display:flex;gap:16px;">
+            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FFF1DA;text-decoration:none;border-bottom:1px solid rgba(255,241,218,0.3);padding-bottom:3px;transition:all 0.2s;" onmouseover="this.style.color='#FAB31E'" onmouseout="this.style.color='#FFF1DA'">Get directions</a>
+            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FAB31E;text-decoration:none;border-bottom:1px solid rgba(250,179,30,0.4);padding-bottom:3px;">Reserve a table</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-panel" style="display:none;grid-template-columns:1.4fr 1fr;">
+        <div style="position:relative;height:480px;overflow:hidden;" id="carousel-2">
+          <div class="carousel-track" style="display:flex;height:100%;transition:transform 0.5s ease;">
+            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1555992336-03a23c7b20ee?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+          </div>
+          <button onclick="prevSlide(2)" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(255,241,218,0.9);border:none;width:40px;height:40px;cursor:pointer;font-size:18px;color:#235E44;display:flex;align-items:center;justify-content:center;transition:all 0.2s;z-index:2;" onmouseover="this.style.background='#FAB31E'" onmouseout="this.style.background='rgba(255,241,218,0.9)'">←</button>
+          <button onclick="nextSlide(2)" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(255,241,218,0.9);border:none;width:40px;height:40px;cursor:pointer;font-size:18px;color:#235E44;display:flex;align-items:center;justify-content:center;transition:all 0.2s;z-index:2;" onmouseover="this.style.background='#FAB31E'" onmouseout="this.style.background='rgba(255,241,218,0.9)'">→</button>
+          <div style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:6px;" id="dots-2">
+            <div class="dot active-dot" style="width:8px;height:8px;border-radius:50%;background:#FAB31E;cursor:pointer;" onclick="goToSlide(2,0)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(2,1)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(2,2)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(2,3)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(2,4)"></div>
+          </div>
+        </div>
+        <div style="background:#235E44;padding:56px 48px;display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:'Satisfy',cursive;font-size:20px;color:#FAB31E;margin-bottom:16px;">Cucina Italiana</div>
+          <h3 style="font-family:'GillSans',sans-serif;font-size:36px;font-weight:700;color:#FFF1DA;margin-bottom:8px;">Siam Paragon</h3>
+          <div style="font-family:'GillSans',sans-serif;font-size:13px;color:#FAB31E;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:24px;">4th Floor</div>
+          <p style="font-family:'GillSans',sans-serif;font-size:14px;color:rgba(255,241,218,0.7);line-height:1.8;margin-bottom:32px;">Rama 1 Road, Pathum Wan, Bangkok<br/>Open daily 11:00 AM – 10:00 PM</p>
+          <div style="display:flex;gap:16px;">
+            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FFF1DA;text-decoration:none;border-bottom:1px solid rgba(255,241,218,0.3);padding-bottom:3px;transition:all 0.2s;" onmouseover="this.style.color='#FAB31E'" onmouseout="this.style.color='#FFF1DA'">Get directions</a>
+            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FAB31E;text-decoration:none;border-bottom:1px solid rgba(250,179,30,0.4);padding-bottom:3px;">Reserve a table</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-panel" style="display:none;grid-template-columns:1.4fr 1fr;">
+        <div style="position:relative;height:480px;overflow:hidden;" id="carousel-3">
+          <div class="carousel-track" style="display:flex;height:100%;transition:transform 0.5s ease;">
+            <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1555992336-03a23c7b20ee?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+          </div>
+          <button onclick="prevSlide(3)" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(255,241,218,0.9);border:none;width:40px;height:40px;cursor:pointer;font-size:18px;color:#235E44;display:flex;align-items:center;justify-content:center;transition:all 0.2s;z-index:2;" onmouseover="this.style.background='#FAB31E'" onmouseout="this.style.background='rgba(255,241,218,0.9)'">←</button>
+          <button onclick="nextSlide(3)" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(255,241,218,0.9);border:none;width:40px;height:40px;cursor:pointer;font-size:18px;color:#235E44;display:flex;align-items:center;justify-content:center;transition:all 0.2s;z-index:2;" onmouseover="this.style.background='#FAB31E'" onmouseout="this.style.background='rgba(255,241,218,0.9)'">→</button>
+          <div style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:6px;" id="dots-3">
+            <div class="dot active-dot" style="width:8px;height:8px;border-radius:50%;background:#FAB31E;cursor:pointer;" onclick="goToSlide(3,0)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(3,1)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(3,2)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(3,3)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(3,4)"></div>
+          </div>
+        </div>
+        <div style="background:#235E44;padding:56px 48px;display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:'Satisfy',cursive;font-size:20px;color:#FAB31E;margin-bottom:16px;">Cucina Italiana</div>
+          <h3 style="font-family:'GillSans',sans-serif;font-size:36px;font-weight:700;color:#FFF1DA;margin-bottom:8px;">ICONSIAM</h3>
+          <div style="font-family:'GillSans',sans-serif;font-size:13px;color:#FAB31E;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:24px;">5th Floor</div>
+          <p style="font-family:'GillSans',sans-serif;font-size:14px;color:rgba(255,241,218,0.7);line-height:1.8;margin-bottom:32px;">Charoen Nakhon Road, Khlong San, Bangkok<br/>Open daily 11:00 AM – 10:00 PM</p>
+          <div style="display:flex;gap:16px;">
+            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FFF1DA;text-decoration:none;border-bottom:1px solid rgba(255,241,218,0.3);padding-bottom:3px;transition:all 0.2s;" onmouseover="this.style.color='#FAB31E'" onmouseout="this.style.color='#FFF1DA'">Get directions</a>
+            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FAB31E;text-decoration:none;border-bottom:1px solid rgba(250,179,30,0.4);padding-bottom:3px;">Reserve a table</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-panel" style="display:none;grid-template-columns:1.4fr 1fr;">
+        <div style="position:relative;height:480px;overflow:hidden;" id="carousel-4">
+          <div class="carousel-track" style="display:flex;height:100%;transition:transform 0.5s ease;">
+            <img src="https://images.unsplash.com/photo-1555992336-03a23c7b20ee?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" style="min-width:100%;height:100%;object-fit:cover;flex-shrink:0;" />
+          </div>
+          <button onclick="prevSlide(4)" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(255,241,218,0.9);border:none;width:40px;height:40px;cursor:pointer;font-size:18px;color:#235E44;display:flex;align-items:center;justify-content:center;transition:all 0.2s;z-index:2;" onmouseover="this.style.background='#FAB31E'" onmouseout="this.style.background='rgba(255,241,218,0.9)'">←</button>
+          <button onclick="nextSlide(4)" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(255,241,218,0.9);border:none;width:40px;height:40px;cursor:pointer;font-size:18px;color:#235E44;display:flex;align-items:center;justify-content:center;transition:all 0.2s;z-index:2;" onmouseover="this.style.background='#FAB31E'" onmouseout="this.style.background='rgba(255,241,218,0.9)'">→</button>
+          <div style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:6px;" id="dots-4">
+            <div class="dot active-dot" style="width:8px;height:8px;border-radius:50%;background:#FAB31E;cursor:pointer;" onclick="goToSlide(4,0)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(4,1)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(4,2)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(4,3)"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:50%;background:rgba(255,241,218,0.5);cursor:pointer;" onclick="goToSlide(4,4)"></div>
+          </div>
+        </div>
+        <div style="background:#235E44;padding:56px 48px;display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:'Satisfy',cursive;font-size:20px;color:#FAB31E;margin-bottom:16px;">Cucina Italiana</div>
+          <h3 style="font-family:'GillSans',sans-serif;font-size:36px;font-weight:700;color:#FFF1DA;margin-bottom:8px;">Terminal 21</h3>
+          <div style="font-family:'GillSans',sans-serif;font-size:13px;color:#FAB31E;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:24px;">5th Floor · Asoke</div>
+          <p style="font-family:'GillSans',sans-serif;font-size:14px;color:rgba(255,241,218,0.7);line-height:1.8;margin-bottom:32px;">88 Sukhumvit Soi 19, Khlong Toei Nuea, Bangkok<br/>Open daily 11:00 AM – 10:00 PM</p>
+          <div style="display:flex;gap:16px;">
+            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FFF1DA;text-decoration:none;border-bottom:1px solid rgba(255,241,218,0.3);padding-bottom:3px;transition:all 0.2s;" onmouseover="this.style.color='#FAB31E'" onmouseout="this.style.color='#FFF1DA'">Get directions</a>
+            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FAB31E;text-decoration:none;border-bottom:1px solid rgba(250,179,30,0.4);padding-bottom:3px;">Reserve a table</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const slideIndexes = [0,0,0,0,0];
+
+  function goToSlide(loc, idx){
+    slideIndexes[loc] = idx;
+    const track = document.querySelector(`#carousel-${loc} .carousel-track`);
+    if(track) track.style.transform = `translateX(-${idx*100}%)`;
+    const dots = document.querySelectorAll(`#dots-${loc} .dot`);
+    dots.forEach((d,i) => { d.style.background = i===idx ? '#FAB31E' : 'rgba(255,241,218,0.5)'; });
+  }
+
+  function nextSlide(loc){
+    const next = (slideIndexes[loc]+1)%5;
+    goToSlide(loc,next);
+  }
+
+  function prevSlide(loc){
+    const prev = (slideIndexes[loc]-1+5)%5;
+    goToSlide(loc,prev);
+  }
+
+  function showLoc(i){
+    const panels = document.querySelectorAll('.loc-panel');
+    const tabs = document.querySelectorAll('.loc-tab');
+    panels.forEach((p,idx) => {
+      if(idx===i){
+        p.style.display='grid';
+        p.style.opacity='0';
+        p.style.transform='translateY(12px)';
+        setTimeout(()=>{ p.style.transition='all 0.4s ease'; p.style.opacity='1'; p.style.transform='translateY(0)'; },10);
+      } else { p.style.display='none'; }
+    });
+    tabs.forEach((t,idx) => {
+      t.style.color = idx===i ? '#235E44' : 'rgba(35,94,68,0.4)';
+      t.style.borderBottom = idx===i ? '3px solid #FAB31E' : '3px solid transparent';
+    });
+  }
+
+  const blocks = document.querySelectorAll('.reveal-block');
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+  },{threshold:0.15});
+  blocks.forEach(b=>obs.observe(b));
+</script>

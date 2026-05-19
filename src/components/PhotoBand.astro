@@ -1,0 +1,83 @@
+<div style="position:relative;height:560px;overflow:hidden;">
+  <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80" alt="BIANCA Restaurant" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 8s ease;transform:scale(1.05);" class="parallax-img" />
+  <div style="position:absolute;inset:0;background:rgba(20,40,28,0.65);"></div>
+
+  <div style="position:relative;z-index:2;height:100%;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 80px;gap:60px;">
+
+    <div>
+      <div class="pb-reveal" style="width:3px;height:48px;background:#FAB31E;margin-bottom:24px;opacity:0;transition:all 0.6s ease 0.1s;"></div>
+      <h2 class="pb-reveal" style="font-family:'GillSans',sans-serif;font-size:36px;font-weight:700;color:#FFF1DA;line-height:1.2;text-transform:uppercase;letter-spacing:0.03em;margin-bottom:28px;opacity:0;transform:translateY(20px);transition:all 0.8s ease 0.2s;">Working hard is inevitable, but enjoying the process is vital to creating honest food.</h2>
+      <a class="pb-reveal" href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#FFF1DA;text-decoration:none;display:inline-flex;align-items:center;gap:10px;opacity:0;transition:all 0.6s ease 0.4s;" onmouseover="this.style.color='#FAB31E';this.style.gap='16px'" onmouseout="this.style.color='#FFF1DA';this.style.gap='10px'">Our story <span style="font-size:16px;">→</span></a>
+    </div>
+
+    <div class="pb-reveal" style="display:flex;flex-direction:column;gap:0;opacity:0;transform:translateY(20px);transition:all 0.7s ease 0.35s;">
+      <div style="font-family:'Satisfy',cursive;font-size:20px;color:#FAB31E;margin-bottom:24px;">Cucina Italiana</div>
+
+      <div style="display:flex;gap:0;">
+        <div style="flex:1;padding:24px 0;border-top:1px solid rgba(255,241,218,0.15);border-bottom:1px solid rgba(255,241,218,0.15);border-right:1px solid rgba(255,241,218,0.1);transition:background 0.3s;" onmouseover="this.style.background='rgba(255,241,218,0.04)'" onmouseout="this.style.background='transparent'">
+          <div class="stat-num" data-target="10000" data-suffix="+" data-display="10,000+" style="font-family:'GillSans',sans-serif;font-size:28px;font-weight:700;color:#FAB31E;line-height:1;margin-bottom:6px;">0+</div>
+          <div style="font-family:'GillSans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,241,218,0.4);">Pizzas Served</div>
+        </div>
+        <div style="flex:1;padding:24px 16px;border-top:1px solid rgba(255,241,218,0.15);border-bottom:1px solid rgba(255,241,218,0.15);border-right:1px solid rgba(255,241,218,0.1);transition:background 0.3s;" onmouseover="this.style.background='rgba(255,241,218,0.04)'" onmouseout="this.style.background='transparent'">
+          <div class="stat-num" data-target="100000" data-suffix="+" data-display="100K+" style="font-family:'GillSans',sans-serif;font-size:28px;font-weight:700;color:#FAB31E;line-height:1;margin-bottom:6px;">0+</div>
+          <div style="font-family:'GillSans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,241,218,0.4);">Tiramisù Served</div>
+        </div>
+        <div style="flex:1;padding:24px 16px;border-top:1px solid rgba(255,241,218,0.15);border-bottom:1px solid rgba(255,241,218,0.15);transition:background 0.3s;" onmouseover="this.style.background='rgba(255,241,218,0.04)'" onmouseout="this.style.background='transparent'">
+          <div style="font-family:'GillSans',sans-serif;font-size:28px;font-weight:700;color:#FAB31E;line-height:1;margin-bottom:6px;">2023</div>
+          <div style="font-family:'GillSans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,241,218,0.4);">Est. Bangkok</div>
+        </div>
+      </div>
+
+      <p style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:300;color:rgba(255,241,218,0.5);line-height:1.8;margin-top:20px;">We believe great Italian food starts with honest ingredients — good flour, real tomatoes, pasta made the way your grandmother would recognise.</p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const pbSection = document.querySelector('.parallax-img')?.closest('div');
+  const pbItems = document.querySelectorAll('.pb-reveal');
+  if(pbSection){
+    const pbObs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          pbItems.forEach(el=>{el.style.opacity='1';el.style.transform='translateY(0)';});
+          const img = document.querySelector('.parallax-img');
+          if(img) img.style.transform='scale(1)';
+        }
+      });
+    },{threshold:0.2});
+    pbObs.observe(pbSection);
+  }
+
+  const stats = document.querySelectorAll('.stat-num');
+  let animated = false;
+  const statObs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting && !animated){
+        animated = true;
+        stats.forEach(el=>{
+          const display = el.dataset.display;
+          if(display){
+            const target = parseInt(el.dataset.target);
+            const suffix = el.dataset.suffix||'';
+            const duration = 1200;
+            const startTime = performance.now();
+            function update(now){
+              const p = Math.min((now-startTime)/duration,1);
+              const ease = 1-Math.pow(1-p,3);
+              const current = Math.floor(target*ease);
+              if(target>=100000) el.textContent=(current>=100000?'100K':Math.floor(current/1000)+'K')+suffix;
+              else if(target>=10000) el.textContent=(current>=10000?'10,000':current.toLocaleString())+suffix;
+              else el.textContent=current+suffix;
+              if(p<1) requestAnimationFrame(update);
+              else el.textContent=display;
+            }
+            requestAnimationFrame(update);
+          }
+        });
+      }
+    });
+  },{threshold:0.3});
+  stats.forEach(el=>statObs.observe(el));
+</script>

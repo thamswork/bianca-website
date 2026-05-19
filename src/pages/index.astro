@@ -1,11 +1,60 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Nav from '../components/Nav.astro'
+import Hero from '../components/Hero.astro'
+import Strip from '../components/Strip.astro'
+import PhotoBand from '../components/PhotoBand.astro'
+import Locations from '../components/Locations.astro'
+import ChefStory from '../components/ChefStory.astro'
+import Stories from '../components/Stories.astro'
+import Menu from '../components/Menu.astro'
+import GalleryStrip from '../components/GalleryStrip.astro'
+import Newsletter from '../components/Newsletter.astro'
+import Footer from '../components/Footer.astro'
 ---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIANCA — Modern Italian Classics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Satisfy&display=swap" rel="stylesheet" />
+    <style>
+      @font-face { font-family: 'GillSans'; src: url('/fonts/Gill Sans.otf'); font-weight: 400; font-style: normal; }
+      @font-face { font-family: 'GillSans'; src: url('/fonts/Gill Sans Italic.otf'); font-weight: 400; font-style: italic; }
+      @font-face { font-family: 'GillSans'; src: url('/fonts/Gill Sans Light.otf'); font-weight: 300; font-style: normal; }
+      @font-face { font-family: 'GillSans'; src: url('/fonts/Gill Sans Light Italic.otf'); font-weight: 300; font-style: italic; }
+      @font-face { font-family: 'GillSans'; src: url('/fonts/Gill Sans Medium.otf'); font-weight: 500; font-style: normal; }
+      @font-face { font-family: 'GillSans'; src: url('/fonts/Gill Sans Medium Italic.otf'); font-weight: 500; font-style: italic; }
+      @font-face { font-family: 'GillSans'; src: url('/fonts/Gill Sans Bold.otf'); font-weight: 700; font-style: normal; }
+      @font-face { font-family: 'GillSans'; src: url('/fonts/Gill Sans Bold Italic.otf'); font-weight: 700; font-style: italic; }
+      @font-face { font-family: 'GillSans'; src: url('/fonts/Gill Sans Heavy.otf'); font-weight: 900; font-style: normal; }
 
-<Layout>
-	<Welcome />
-</Layout>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; overflow-x: hidden; }
+      html { scroll-behavior: smooth; }
+
+      body { font-family: 'GillSans', sans-serif; color: #1a1a1a; background: #FAB31E; margin: 0; padding: 0; overflow-x: hidden; }
+
+      section, .loc-panel, .story-card {
+        background-color: transparent !important;
+      }
+
+      .white-bg { background-color: rgba(255,255,255,0.6) !important; }
+      .cream-bg { background-color: rgba(245,240,232,0.0) !important; }
+    </style>
+  </head>
+  <body>
+    <Nav />
+    <Hero />
+    <Strip />
+    <PhotoBand />
+    <Locations />
+    <ChefStory />
+    <Stories />
+    <Menu />
+    <GalleryStrip />
+    <Newsletter />
+    <Footer />
+  </body>
+</html>
