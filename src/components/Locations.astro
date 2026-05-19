@@ -195,7 +195,7 @@
         currentLoc = (currentLoc + 1) % 5;
         showLoc(currentLoc);
       }
-    }, 3000);
+    }, 5000);
   }
 
   startAutoRotate();
@@ -223,15 +223,31 @@
     currentLoc = i;
     const panels = document.querySelectorAll('.loc-panel');
     const tabs = document.querySelectorAll('.loc-tab');
-    panels.forEach((p,idx) => {
-      if(idx===i){
-        p.style.display='grid';
-        p.style.opacity='0';
-        p.style.transform='translateY(12px)';
-        setTimeout(()=>{ p.style.transition='all 0.4s ease'; p.style.opacity='1'; p.style.transform='translateY(0)'; },10);
-      } else { p.style.display='none'; }
-    });
+    const current = Array.from(panels).find(p => p.style.display === 'grid');
+    
+    if(current) {
+      current.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      current.style.opacity = '0';
+      current.style.transform = 'translateY(8px)';
+      setTimeout(() => {
+        current.style.display = 'none';
+        const next = panels[i];
+        next.style.display = 'grid';
+        next.style.opacity = '0';
+        next.style.transform = 'translateY(8px)';
+        setTimeout(() => {
+          next.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+          next.style.opacity = '1';
+          next.style.transform = 'translateY(0)';
+        }, 20);
+      }, 550);
+    } else {
+      panels[i].style.display = 'grid';
+      panels[i].style.opacity = '1';
+    }
+
     tabs.forEach((t,idx) => {
+      t.style.transition = 'all 0.4s ease';
       t.style.color = idx===i ? '#235E44' : 'rgba(35,94,68,0.4)';
       t.style.borderBottom = idx===i ? '3px solid #FAB31E' : '3px solid transparent';
     });
