@@ -3,11 +3,11 @@
     <h2 style="font-family:'GillSans',sans-serif;font-size:52px;font-weight:700;color:#235E44;line-height:1;margin-bottom:12px;";text-shadow:4px 4px 8px rgba(0,0,0,0.18),1px 1px 0px rgba(0,0,0,0.08);">Where to find us</h2>
 
     <div class="reveal-block" style="display:flex;gap:0;border-bottom:2px solid #e0d8cc;margin-bottom:0;transition:all 0.7s ease 0.15s;" id="loc-tabs">
-      <button onclick="showLoc(0)" class="loc-tab active-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:#235E44;border-bottom:3px solid #FAB31E;margin-bottom:-2px;transition:all 0.3s;">One Bangkok</button>
-      <button onclick="showLoc(1)" class="loc-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:rgba(35,94,68,0.4);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.3s;">Emsphere</button>
-      <button onclick="showLoc(2)" class="loc-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:rgba(35,94,68,0.4);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.3s;">Siam Paragon</button>
-      <button onclick="showLoc(3)" class="loc-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:rgba(35,94,68,0.4);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.3s;">ICONSIAM</button>
-      <button onclick="showLoc(4)" class="loc-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:rgba(35,94,68,0.4);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.3s;">Terminal 21</button>
+      <button onclick="showLoc(0, true)" class="loc-tab active-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:#235E44;border-bottom:3px solid #FAB31E;margin-bottom:-2px;transition:all 0.3s;">One Bangkok</button>
+      <button onclick="showLoc(1, true)" class="loc-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:rgba(35,94,68,0.4);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.3s;">Emsphere</button>
+      <button onclick="showLoc(2, true)" class="loc-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:rgba(35,94,68,0.4);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.3s;">Siam Paragon</button>
+      <button onclick="showLoc(3, true)" class="loc-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:rgba(35,94,68,0.4);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.3s;">ICONSIAM</button>
+      <button onclick="showLoc(4, true)" class="loc-tab" style="font-family:'GillSans',sans-serif;font-size:13px;font-weight:700;padding:14px 24px;border:none;cursor:pointer;background:transparent;color:rgba(35,94,68,0.4);border-bottom:3px solid transparent;margin-bottom:-2px;transition:all 0.3s;">Terminal 21</button>
     </div>
 
     <div id="loc-panels">
@@ -41,7 +41,7 @@
           <p style="font-family:'GillSans',sans-serif;font-size:14px;color:rgba(255,241,218,0.7);line-height:1.8;margin-bottom:32px;">Rama 4 Road, Lumphini, Bangkok<br/>Open daily 10:00 AM – 10:00 PM</p>
           <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
             <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#235E44;text-decoration:none;background:#FAB31E;padding:10px 20px;transition:all 0.3s;white-space:nowrap;" onmouseover="this.style.background='#FFF1DA';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#FAB31E';this.style.transform='translateY(0)'">Reserve a table</a>
-            <a href="/menus/one-bangkok.pdf" target="_blank" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FAB31E;text-decoration:none;border-bottom:1px solid rgba(250,179,30,0.4);padding-bottom:3px;transition:all 0.2s;" onmouseover="this.style.color='#FFF1DA'" onmouseout="this.style.color='#FAB31E'">View menu</a>
+            <a href="/menus/one-bangkok.pdf" target="_blank" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFF1DA;text-decoration:none;border:1px solid rgba(255,241,218,0.35);padding:10px 20px;transition:all 0.3s;white-space:nowrap;display:inline-block;" onmouseover="this.style.borderColor='rgba(255,241,218,0.8)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(255,241,218,0.35)';this.style.transform='translateY(0)'">View menu</a>
           </div>
         </div>
       </div>
@@ -72,8 +72,8 @@
           <h3 style="font-family:'GillSans',sans-serif;font-size:36px;font-weight:700;color:#FFF1DA;margin-bottom:8px;">Emsphere</h3>
           <div style="font-family:'GillSans',sans-serif;font-size:13px;color:#FAB31E;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:24px;">G Floor</div>
           <p style="font-family:'GillSans',sans-serif;font-size:14px;color:rgba(255,241,218,0.7);line-height:1.8;margin-bottom:32px;">Sukhumvit Road, Khlong Toei, Bangkok<br/>Open daily 10:00 AM – 10:00 PM</p>
-          <div style="display:flex;gap:16px;">
-            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FAB31E;text-decoration:none;border-bottom:1px solid rgba(250,179,30,0.4);padding-bottom:3px;">Reserve a table</a>
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#235E44;text-decoration:none;background:#FAB31E;padding:10px 20px;transition:all 0.3s;white-space:nowrap;" onmouseover="this.style.background='#FFF1DA';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#FAB31E';this.style.transform='translateY(0)'">Reserve a table</a>
             <a href="/menus/emsphere.pdf" target="_blank" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFF1DA;text-decoration:none;border:1px solid rgba(255,241,218,0.35);padding:10px 20px;transition:all 0.3s;white-space:nowrap;display:inline-block;" onmouseover="this.style.borderColor='rgba(255,241,218,0.8)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(255,241,218,0.35)';this.style.transform='translateY(0)'">View menu</a>
           </div>
         </div>
@@ -105,8 +105,8 @@
           <h3 style="font-family:'GillSans',sans-serif;font-size:36px;font-weight:700;color:#FFF1DA;margin-bottom:8px;">Siam Paragon</h3>
           <div style="font-family:'GillSans',sans-serif;font-size:13px;color:#FAB31E;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:24px;">4th Floor</div>
           <p style="font-family:'GillSans',sans-serif;font-size:14px;color:rgba(255,241,218,0.7);line-height:1.8;margin-bottom:32px;">Rama 1 Road, Pathum Wan, Bangkok<br/>Open daily 10:00 AM – 10:00 PM</p>
-          <div style="display:flex;gap:16px;">
-            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FAB31E;text-decoration:none;border-bottom:1px solid rgba(250,179,30,0.4);padding-bottom:3px;">Reserve a table</a>
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#235E44;text-decoration:none;background:#FAB31E;padding:10px 20px;transition:all 0.3s;white-space:nowrap;" onmouseover="this.style.background='#FFF1DA';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#FAB31E';this.style.transform='translateY(0)'">Reserve a table</a>
             <a href="/menus/siam-paragon.pdf" target="_blank" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFF1DA;text-decoration:none;border:1px solid rgba(255,241,218,0.35);padding:10px 20px;transition:all 0.3s;white-space:nowrap;display:inline-block;" onmouseover="this.style.borderColor='rgba(255,241,218,0.8)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(255,241,218,0.35)';this.style.transform='translateY(0)'">View menu</a>
           </div>
         </div>
@@ -138,8 +138,8 @@
           <h3 style="font-family:'GillSans',sans-serif;font-size:36px;font-weight:700;color:#FFF1DA;margin-bottom:8px;">ICONSIAM</h3>
           <div style="font-family:'GillSans',sans-serif;font-size:13px;color:#FAB31E;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:24px;">5th Floor</div>
           <p style="font-family:'GillSans',sans-serif;font-size:14px;color:rgba(255,241,218,0.7);line-height:1.8;margin-bottom:32px;">Charoen Nakhon Road, Khlong San, Bangkok<br/>Open daily 10:00 AM – 10:00 PM</p>
-          <div style="display:flex;gap:16px;">
-            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FAB31E;text-decoration:none;border-bottom:1px solid rgba(250,179,30,0.4);padding-bottom:3px;">Reserve a table</a>
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#235E44;text-decoration:none;background:#FAB31E;padding:10px 20px;transition:all 0.3s;white-space:nowrap;" onmouseover="this.style.background='#FFF1DA';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#FAB31E';this.style.transform='translateY(0)'">Reserve a table</a>
             <a href="/menus/iconsiam.pdf" target="_blank" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFF1DA;text-decoration:none;border:1px solid rgba(255,241,218,0.35);padding:10px 20px;transition:all 0.3s;white-space:nowrap;display:inline-block;" onmouseover="this.style.borderColor='rgba(255,241,218,0.8)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(255,241,218,0.35)';this.style.transform='translateY(0)'">View menu</a>
           </div>
         </div>
@@ -171,8 +171,8 @@
           <h3 style="font-family:'GillSans',sans-serif;font-size:36px;font-weight:700;color:#FFF1DA;margin-bottom:8px;">Terminal 21</h3>
           <div style="font-family:'GillSans',sans-serif;font-size:13px;color:#FAB31E;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:24px;">5th Floor · Asoke</div>
           <p style="font-family:'GillSans',sans-serif;font-size:14px;color:rgba(255,241,218,0.7);line-height:1.8;margin-bottom:32px;">88 Sukhumvit Soi 19, Khlong Toei Nuea, Bangkok<br/>Open daily 10:00 AM – 10:00 PM</p>
-          <div style="display:flex;gap:16px;">
-            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FAB31E;text-decoration:none;border-bottom:1px solid rgba(250,179,30,0.4);padding-bottom:3px;">Reserve a table</a>
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+            <a href="#" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#235E44;text-decoration:none;background:#FAB31E;padding:10px 20px;transition:all 0.3s;white-space:nowrap;" onmouseover="this.style.background='#FFF1DA';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#FAB31E';this.style.transform='translateY(0)'">Reserve a table</a>
             <a href="/menus/terminal-21.pdf" target="_blank" style="font-family:'GillSans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FFF1DA;text-decoration:none;border:1px solid rgba(255,241,218,0.35);padding:10px 20px;transition:all 0.3s;white-space:nowrap;display:inline-block;" onmouseover="this.style.borderColor='rgba(255,241,218,0.8)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(255,241,218,0.35)';this.style.transform='translateY(0)'">View menu</a>
           </div>
         </div>
@@ -184,6 +184,21 @@
 
 <script is:inline>
   const slideIndexes = [0,0,0,0,0];
+  let currentLoc = 0;
+  let userInteracted = false;
+  let autoRotateTimer = null;
+
+  function startAutoRotate() {
+    if(autoRotateTimer) clearInterval(autoRotateTimer);
+    autoRotateTimer = setInterval(() => {
+      if(!userInteracted) {
+        currentLoc = (currentLoc + 1) % 5;
+        showLoc(currentLoc);
+      }
+    }, 3000);
+  }
+
+  startAutoRotate();
 
   function goToSlide(loc, idx){
     slideIndexes[loc] = idx;
@@ -203,7 +218,9 @@
     goToSlide(loc,prev);
   }
 
-  function showLoc(i){
+  function showLoc(i, manual=false){
+    if(manual){ userInteracted = true; if(autoRotateTimer) clearInterval(autoRotateTimer); }
+    currentLoc = i;
     const panels = document.querySelectorAll('.loc-panel');
     const tabs = document.querySelectorAll('.loc-tab');
     panels.forEach((p,idx) => {
